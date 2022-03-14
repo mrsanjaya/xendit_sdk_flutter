@@ -15,8 +15,7 @@ Ini bukan SDK Resmi
 Install my-project with npm
 
 ```bash
-  npm install my-project
-  cd my-project
+  flutter pub add xendit_unofficial
 ```
     
 ## Authors
