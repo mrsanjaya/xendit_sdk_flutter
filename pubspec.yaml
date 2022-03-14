@@ -8,8 +8,10 @@ environment:
   flutter: ">=2.5.0"
 
 dependencies:
+  dio: ^4.0.4
   flutter:
     sdk: flutter
+  get: ^4.6.1
 
 dev_dependencies:
   flutter_test:

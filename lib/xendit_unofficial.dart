@@ -6,12 +6,20 @@
 import 'dart:async';
 
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+import 'package:xendit_unofficial/functions/balance.dart';
+import 'package:xendit_unofficial/services/token.dart';
+export 'functions/qr_code.dart';
+export 'functions/balance.dart';
+export 'functions/virtual_account.dart';
+export 'constant/bank_code.dart';
 
-class XenditUnofficial {
-  static const MethodChannel _channel = MethodChannel('xendit_unofficial');
+class XenditSDK {
+  String apiKey;
+  XenditSDK({required this.apiKey});
 
-  static Future<String?> get platformVersion async {
-    final String? version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
+  init() async {
+    TokenController tokenController = Get.put(TokenController());
+    tokenController.setUsername(apiKey);
   }
 }
