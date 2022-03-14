@@ -7,10 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:xendit_unofficial/xendit_unofficial.dart';
 
 void main() {
-  XenditSDK(
-          apiKey:
-              "xnd_development_ye1t3sdWMB93Lu9dDPXhp4WaPJK3Jvo2CcB7ylQtoRoDjlKL2ZSX7V8CYsLt")
-      .init();
+  XenditSDK(apiKey: "").init();
   runApp(const MyApp());
 }
 
